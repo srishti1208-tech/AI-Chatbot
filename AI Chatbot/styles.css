@@ -7,8 +7,9 @@
     font-family: 'Montserrat' , sans-serif;
 }
 body{
-        background: #001624;
-background: linear-gradient(90deg, rgba(0, 22, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    background: #2A7B9B;
+    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(66, 146, 164, 1) 66%, rgba(87, 199, 133, 1) 100%, rgba(237, 221, 83, 1) 100%);
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,6 +20,11 @@ background: linear-gradient(90deg, rgba(0, 22, 36, 1) 0%, rgba(9, 9, 121, 1) 35%
 .chat-container{
     width:400px;
     height: 600px;
-    background: rgba(255, 255, 255, 0.2) ;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter:blur(10px);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
     
 }
