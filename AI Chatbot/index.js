@@ -15,9 +15,25 @@ function addMessage(message,className){
     chatBox.scrollTop = chatBox.scrollHeight;//to automatically scroll the chat box to the bottom whenever a new message is added
 }
 
+function showTyping(){
+    const typingDiv = document.createElement("div");
+    typingDiv.classList.add("message","bot-message");
+    typingDiv.textContent="AI is typing..."
+    chatBox.appendChild(typingDiv);
+    chatBox.scrollTop = chatBox.scrollweight;
+    return typingDiv;
+}
+
 sendBtn.onclick =async () => {
     const message = userInput.value.trim();
     console.log(message)
     if(message === "") return;
     addMessage(message,"user-message");
+    userInput.value =""
+    
+    const typingDiv = showTyping();
+
+    const botReplay = "Replay";
+    typingDiv.remove();
+    addMessage(botReplay, "bot-message");
 }
